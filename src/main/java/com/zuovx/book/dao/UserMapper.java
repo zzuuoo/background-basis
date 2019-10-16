@@ -2,12 +2,12 @@ package com.zuovx.book.dao;
 
 import com.zuovx.book.model.User;
 import com.zuovx.book.model.UserExample;
-import java.util.List;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Mapper
 @Component
@@ -116,5 +116,5 @@ public interface UserMapper {
      * @return
      */
     @Select("SELECT EXISTS(SELECT 1 FROM user WHERE account = #{account} and id = #{userId} and is_deleted = 0) ")
-    boolean checkUserExists(@Param("account") String account,@Param("id") String id);
+    boolean checkUserExists(@Param("account") String account, @Param("id") String id);
 }

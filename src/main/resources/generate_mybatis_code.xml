@@ -15,7 +15,7 @@
     </commentGenerator>
 
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                    connectionURL="jdbc:mysql://127.0.0.1:3306/book_sharing?characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai"
+                    connectionURL="jdbc:mysql://127.0.0.1:3306/db_name?characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai"
                     userId="root"
                     password="Root123456">
       <property name="nullCatalogMeansCurrent" value="true"/>
@@ -39,10 +39,6 @@
     <javaClientGenerator type="XMLMAPPER" targetPackage="com.zuovx.book.dao"  targetProject="src/main/java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
-
-
-   <table tableName="book" > </table>
-    <table tableName="desire" > </table>
     <table tableName="user" > </table>
 
 
