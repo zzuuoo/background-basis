@@ -1,6 +1,6 @@
-package com.zuovx.book.service.user;
+package com.zuovx.book.utils;
 
-import com.zuovx.book.utils.TokenUtils;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -18,8 +18,6 @@ public class TokenUtilsTest {
 	public void createJWT() {
 		String token = TokenUtils.createJwt("zuo","2",null,null,null,
 				1800000,"MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=");
-		System.out.println(token);
-
-		System.out.println(TokenUtils.parseJwt(token,"MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY="));;
+		Assert.assertEquals(TokenUtils.parseJwt(token,"MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=").get("account").toString(),"zuo");
 	}
 }
