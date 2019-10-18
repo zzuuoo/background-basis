@@ -1,5 +1,6 @@
 package com.zuovx.book.service;
 
+import com.zuovx.book.annotation.ServiceExceptionLog;
 import com.zuovx.book.dao.UserMapper;
 import com.zuovx.book.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +24,10 @@ public class DemoService {
 
 	public List<User> getUserByName(String name){
 		return userMapper.selectByName(name);
+	}
+
+	@ServiceExceptionLog(describe = "窝窝头")
+	public String testException() throws Exception{
+		throw new Exception("窝窝头一块钱四个，嘿嘿！");
 	}
 }

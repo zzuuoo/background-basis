@@ -40,7 +40,7 @@
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
     <table tableName="user" > </table>
-
+    <table tableName="operator_log" > </table>
 
 
 

@@ -19,6 +19,20 @@ CREATE TABLE `user`(
   PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE = utf8_general_ci COMMENT '用户信息表';
 
+CREATE TABLE `operator_log`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `ip` varchar(128) NOT NULL DEFAULT "" COMMENT 'ip',
+  `operator` varchar(255) NOT NULL DEFAULT "" COMMENT '操作内容',
+  `params` varchar(128) NOT NULL DEFAULT "" COMMENT '参数',
+  `method` varchar(128) NOT NULL DEFAULT "" COMMENT '方法名',
+  `user_id` int(11) NOT NULL DEFAULT 0 COMMENT '用户id',
+  `is_deleted` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0否 1是',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT '操作日志';
+
+
 
 
 
