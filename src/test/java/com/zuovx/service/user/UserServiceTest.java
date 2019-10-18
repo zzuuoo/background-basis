@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * @author zuoweixing
+ * @author zuovx
  * @date 2019-10-16 14:28
  */
 public class UserServiceTest {

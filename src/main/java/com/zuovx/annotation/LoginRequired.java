@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * 需要登陆验证的controller方法上添加该注解
- * @author zuoweixing
+ * @author zuovx
  * @date 2019-10-11 13:56
  */
 @Target(ElementType.METHOD)

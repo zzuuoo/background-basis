@@ -1,7 +1,7 @@
 package com.zuovx.utils;
 
 /**
- * @author zuoweixing
+ * @author zuovx
  * @date 2019-10-11 15:23
  */
 public class Constants {

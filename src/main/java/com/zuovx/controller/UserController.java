@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.net.URLEncoder;
 
 /**
- * @author zuoweixing
+ * @author zuovx
  * @date 2019-10-11 14:27
  */
 @Api(value = "UserController",description = "用户相关接口")
